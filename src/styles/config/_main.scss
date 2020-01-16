@@ -1,0 +1,45 @@
+@use 'variables' as v;
+@use 'mixines' as m;
+
+html,
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: v.$base-color;
+
+  @include m.desktop {
+    background: url(../assets/images/bcg-grey.jpg);
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  @include m.desktop {
+    display: block;
+  }
+}
+
+.container {
+  margin: 0 auto;
+
+  @include m.desktop() {
+    max-width: v.$desktop-container;
+  }
+
+  @include m.tablet() {
+  width: 80%;
+}
+
+  @include m.tablet-min() {
+  width: 80%;
+}
+
+  @include m.phone() {
+   width: 80%;
+  }
+}
+
+

@@ -1,0 +1,52 @@
+@use '../config' as *;
+
+.content {
+    padding: 2.27em 0 7em;
+
+    &__logo {
+        margin-bottom: 1.8em;
+
+        @include tablet-min {
+            width: 60px;
+        }
+
+        @include phone {
+            width: 50px;
+        }
+    }
+
+    &__title-wrap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3.2em;
+
+        @include tablet-min {
+            margin-bottom: 2em;
+        }
+
+        @include phone {
+            margin-bottom: 1.5em;
+        }
+    }
+
+    &__title {
+
+        @include tablet-min {
+            width: 160px;
+        }
+
+        @include phone {
+            width: 150px;
+        }
+    }
+}
+
+.container-outer {
+    max-width: $d-container-bcg;
+    margin: 0 auto;
+    background: url(../assets/images/bcg-cut.jpg) 0 50% / cover no-repeat;
+
+    @include desktop {
+        min-height: 60em;
+    }
+}

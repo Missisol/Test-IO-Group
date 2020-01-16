@@ -1,0 +1,57 @@
+@use '../config' as *;
+
+.check {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+
+        @include phone {
+            min-width: 10em;
+        }
+    }
+
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &__label-ch {
+        position: relative;
+        display: inline-block;
+        font-size: 0.95em;
+        line-height: 1;
+        margin-bottom: 0.8em;
+        padding-left: 28px;
+
+
+        @include tablet {
+            font-size: 0.75em;
+        }
+
+        @include tablet-min {
+            font-size: 0.75em;
+        }
+
+        @include phone {
+            font-size: 0.7em;
+        }
+    }
+
+    &__check {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 18px;
+        background: url(../assets/images/check-e.svg) 50% 50% / auto 100% no-repeat;
+        opacity: .8;
+    }
+}
+
+.check__checkbox:checked + span.check__check {
+    background: url(../assets/images/check-m.svg) 50% 50% / auto 100% no-repeat;
+}
